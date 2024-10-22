@@ -4,7 +4,7 @@
 /* {} idicates a CSS Declaration */
 body {
   /* property:value; is a CSS Rule */
-  background-color: #fdfdfd;
+  background-color: lightcoral;
   color: #0d0d0d;
 }
 
@@ -22,7 +22,7 @@ header {
   border-radius: 50%;
 }
 
-ul {
+.navigation {
   display: flex;
   justify-content: end;
   gap: 15px;
@@ -32,12 +32,76 @@ ul {
 }
 
 /* MAIN */
-main {
+.hero {
   height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroText {
+  width: 50%;
+}
+
+.heroImg {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.projects {
+  height: 100vh;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  border: 3px solid black;
+  border-radius: 10px;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardText {
+  width: 50%;
+}
+
+.cardImg {
+  width: 50%;
+  border: 1px solid black;
 }
 
 /* FOOTER */
 footer {
   display: flex;
   justify-content: center;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 426px) {
+  body {
+    background-color: lightyellow;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .projectCard {
+    flex-direction: column;
+  }
 }
